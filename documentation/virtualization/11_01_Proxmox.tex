@@ -1,0 +1,29 @@
+\newpage
+
+\subsection{Proxmox}
+\subsubsection{VE-no-subscription}
+In order to disable the Proxmox check for an active licence key it is required to change the apt-repository to the pve-no-subscription repository.
+The pve-no-subscription is a test environment of Proxmox which is not as fully tested and patched as the live environment.
+
+\subsubsection{Pve-no-subscription repository}
+nano /etc/apt/sources.list
+\newline
+deb http://ftp.debian.org/debian jessie main contrib
+\newline
+to
+\\
+Proxmox pve-no-subscription repository:
+deb http://download.proxmox.com/debian jessie pve-no-subscription
+\newline
+\#securityupdates
+\\
+deb http://download.proxmox.com/debian jessie main contrib
+
+\subsubsection{Error message handling}
+To prevent the error message from showing edit the following file:
+\newline
+nano /etc/apt/sources.list.d/pve-enterpise.list
+\newline
+to
+\newline
+\# deb https://enterprise.proxmox.com/debian jessie pve-enterprise

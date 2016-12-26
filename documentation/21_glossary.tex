@@ -1,0 +1,78 @@
+\section{Glossary}
+\subsection{MySQL}
+MySQL is an open source database management system (DBMS). It is in use on more than 50 million implementations\footnote{state 2013} and thus the most used DBMS in the world.
+
+\subsection{XAMPP}
+Damit MySQL seine Daten speichern kann, wird ein MySQL-Server benötigt. Dafür gibt es eine Open-Source Software die den Namen XAMPP trägt. XAMPP kann von der offiziellen Webseite\footnote{https://www.apachefriends.org/de/index.html} heruntergeladen werden und wird dann auf dem Rechner installiert. In der folgenden Abbildung kann man die Benutzeroberfläche von XAMPP sehr gut erkennen und den aktiven MySQL-Server.
+
+\subsection{Navicat}
+Um eine Verbindung mit der Datenbank herzustellen  hat sich das Team des HTL Eventmanager für die Open-Source Software Navicat Lite von der Firma PremiumSoft entschieden. Das Programm wird kostenlos von der offiziellen Homepage\footnote{http://www.navicat.com/} heruntergeladen und dann auf dem Rechner installiert. Navicat ist eine optisch top gestaltete Software für die Verwaltung von Datenbankverwaltungssystemen. Der Umgang mit Navicat ist sehr einfach gehalten und schnell anzulernen.
+
+     
+     \subsection{Responsive Webdesign}
+     Responsive Webdesign (kurz RWD) bezeichnet ein gestalterisches Paradigma zur Entwicklung von Webseiten. Wurde eine Webseite "responsive" entwickelt, passen sich Elemente wie Navigation, Texte, Bilder, Seitenspalten, etc. an die Eigenschaften des Darstellungsgerätes (bspw. Bildschirmbreite und -Auflösung) an und erlauben dadurch eine korrekte Darstellung , egal ob Desktop, Smartphone oder Tablet.\\
+     Die Site gewinnt an Übersichtlichkeit und der Nutzer ist nicht mehr gezwungen, horizontal zu scrollen und kann dadurch die Webseite komfortabel nutzen.
+     
+     \subsection{Hypertext Markup Language}
+     Die Hypertext Markup Language (kurz HTML) ist eine textbasierte Auszeichnungssprache zur Definition von Seitenstrukturen wie Texten, Bildern, Links und Aufbauelemente. HTML stellt die Grundlage des World Wide Web dar und wird vom WWW Consortium (W3C) und der Web Hypertext Application Technology Working Group (WHATWG) weiterentwickelt.\\
+     Für den \getHauptTitel wird die aktuellste Version HTML5 verwendet.
+     
+     \subsection{JavaScript}
+     JavaScript wurde entwickelt um HTML-Seiten zu dynamisieren. Ferner wurde eine Skriptsprache entworfen, mit der es möglich ist, Benutzerinteraktionen auszuwerten, Inhalte zu verändern und so die Potentiale von HTML und CSS zu erweitern. Damit JavaScript funktioniert, muss der verwendete Browser über einen JS-Interpreter verfügen. Heutzutage ist das die Norm, es kann jedoch vorkommen dass JS aus Sicherheitsgründen deaktiviert wurde.
+     
+     \subsection{Document Object Model}
+     Das Document Object Model DOM ist eine Schnittstelle für den Zugriff auf HTML-Dokumente. Sie erlaubt z.B. mit JavaScript dynamisch Inhalte, Strukturen und Layouts zu manipulieren. Vor der Entwicklung von DOM in den 90ern konnte auf HTML-Dokumente nur rudimentär mit JavaScript zugegriffen werden. Die meisten Browserhersteller entwickelten hierfür eigenständige Modelle. Dadurch entstand für Webentwickler die Notwendigkeit, für jeden zu unterstützenden Browser eine eigens angepasste Version zu schreiben. Die ersten vom W3C entwickelten DOM-Standards galten daher der Zusammenführung und Standardisierung des dynamischen Zugriffs auf HTML-Dokumente.
+     
+     \subsection{Cascading Style Sheets}
+     CSS, verwendet in der Version 3, ist eine Gestaltungssprache für HTML und DOM-Objekte. Mit Hilfe von Selektoren kann auf Objekte zugegriffen werden um diese grafisch anzupassen. Hierfür bietet CSS etliche Anweisungen für Dimensionierung, Farbgestaltung, Animierung, Schrifttypen, etc. pp.
+
+	\subsection{Font}
+	Als Font bezeichnet man die elektronische Form einer Schriftart. Diese werden zur Darstellung von Zeichenketten auf Bildschirmen oder für die Ausgabe am Drucker verwendet. Man unterscheidet in zwei Kategorien, basierend auf der Art der Speicherung, welche entweder raster- oder vektorbasiert in einer Fonts-Datei (.tff) erfolgt.
+	Während bei einer Rasterspeicherung jedes Pixel einer sogenannten Glyphe einzeln festgelegt ist, werden für Vektorenfonts nur mathematische Angaben der Umrisse abgespeichert.
+	
+	\lstset{frame=shadowbox, breaklines=true}
+
+	\subsection{World Wide Web Consortium (W3C)}
+		Beim World Wide Web Consortium handelt es sich um das Gremium für die Standardisierung aller wichtigen Internettechniken die maßgeblich für das Surfen im Internet (dem World Wide Web) sind.
+		Die W3C gibt vor, wie gültiger HTML-, XML- oder auch CSS-Code auszusehen hat.
+		Browserhersteller und Webprogrammierer sollten sich an diese Standards halten um eine fehlerfreie Darstellung zu garantieren. Die Identifizierung eines Standards innerhalb eines HTML-Dokumentes erfolgt mithilfe von sogenannten Doctypes.\\
+		Diese müssen zwingend in der ersten Zeile eines HTML-Dokumentes definiert werden.
+	
+	\begin{lstlisting}
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+	\end{lstlisting}
+		Der Dokumententyp eines HTML 4.01 Dokumentes mit Verweis zur W3C-Spezifikation.\\
+	
+	\begin{lstlisting}
+	<!DOCTYPE html>
+	\end{lstlisting}
+		Der Dokumententyp eines HTML 5 Dokumentes. Mit HTML 5 entfallen erstmals die Querverweise zur W3C.
+		
+	\subsection{Daemon}
+		Ein Daemon wird unter Linuxumgebungen ein Hintergrundservice genannt der permanent läuft und keine Interaktion mit dem Benutzer benötigt.
+		Ein Daemon wird meistens durch ein "d" am Ende seines Namens gekennzeichnet.\\
+		Beispiele für Daemons sind der Apache Webserver (httpd), der MySQL Server (mysqld) oder auch der SSH Server (sshd).
+		
+	\subsection{SQL Injections}
+		SQL Injections sind Attacken welche probieren SQL-Code in eine SQL-Abfrage einzuschleusen.\\
+		Bei nicht ausreichenden Sicherheitsvorkehrungen kann dies fatale Folgen für jeden Webdienst haben.\\
+|"SELECT * FROM users WHERE firstname = ''; DROP TABLE users; -- '"|\\
+		
+		Durch eine Attacke wie diese kann unter anderem die komplette Datenbank ausgelesen, verändert oder sogar gelöscht werden.
+	
+	\subsection{Captcha}
+		Bei Captchas handelt es sich um kleine Bilder welche authentische Benutzer von Bots unterscheiden sollen.
+		Erreicht wird dies oft durch verschwommene oder verschobene Buchstaben und Zahlenkombinationen welche darauf abzielen nur von Menschen identifiziert zu werden.
+	
+		
+		Captchas sind vorallem wegen der Unlesbarkeit für ältere Menschen und Menschen mit Sehschwächen bekannt sowie für die recht leichte Erkennung einiger Captchas durch Computerprogramme.
+		
+	\subsection{Timestamp}
+		Ein Timestamp (auch Unixzeit genannt) bildet die Zeit in Sekunden ab, welche seit dem 1. Januar 1970 um 00:00 Uhr (UTC) vergangen sind.
+		Dieser Timestamp erleichtert die Arbeit mit Zeitpunkten ungemein da ein Zeitstempel unabhängig von Zeitzonen sowie Sommer- und Winterzeit berechnet wird.\\
+		
+		Beispiel: Der \textbf{15. Februar 2015 um 17:26:25} entspricht einem Timestamp von \textbf{1424017585}.\\
+		
+		Die 32-Bit Zeitstempel, welche vorallem in alten Betriebssystem verwendet werden, erreichen am 19. Januar 2038 ihr Limit und sind ab diesem Zeitpunkt nicht mehr einsatzfähig.
+	

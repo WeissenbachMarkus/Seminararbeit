@@ -1,0 +1,115 @@
+%Dokumentenklasse festlegen
+\documentclass[11pt, a4paper, titlepage, oneside]{extarticle}
+
+\usepackage[utf8]{inputenc}				%Deutsche Sprachanpassung
+\usepackage[T1]{fontenc}                %Sibentrennung und Sonderzeichen
+\usepackage[english]{babel}				%Eingabe der Sonderzeichen
+\usepackage{cite}						%Für Literaturverzeichnis
+
+\usepackage{eurosym}					%Eingabe von €-Zeichen
+
+\usepackage{lmodern, fancyhdr}         	%Kopf-Fußzeile mit Gestaltungsmöglichkeit
+\usepackage{graphicx, array}  			%einbinden von Grafiken
+\usepackage{enumitem}
+\usepackage{subfigure, tabularx}       	%besondere Gestaltungen bei Grafiken, erweiterte Tabellen
+%\usepackage{lstlisting}
+\usepackage{nameref}         		   	    	%zusätzliche referenzen zu sections
+\usepackage[printonlyused, withpage]{acronym}
+\usepackage{tablefootnote}
+\usepackage{listings}                   		%Darstellung von Quellcode
+\lstset{basicstyle=\footnotesize, captionpos=b}
+\usepackage{lastpage}						%Lastpage
+
+%Schrift global auf Helvetica umstellen
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet} 
+\usepackage{blindtext}
+
+%\usepackage{array,booktabs,ragged2e}					%Tabellenalignment
+
+%Raendereinstellung des Dokuments
+\linespread{1.2}                         		%Zeilenabstand
+\parindent0cm                            		%kein Zeileneinzug
+\usepackage[left=30.00mm, right=20.00mm, top=30.00mm, bottom=30.00mm]{geometry}
+\usepackage[pdftitle={Deployment}, 
+            pdfsubject={Documentation}, 
+            pdfauthor={3AAIF}, 
+            pdfkeywords={Aufbaulehrgang, IT-Kolleg, Imst, Latex},
+            colorlinks, 
+            linkcolor=blue, 
+            bookmarks, 
+            bookmarksopen, 
+            urlcolor=blue, 
+            bookmarksnumbered, 
+            final]{} 
+
+%macros
+\input{macro.tex} 
+
+\pagestyle{fancy}
+
+%Kopfzeile
+\lhead{\footnotesize \getSchool}
+\chead{}
+\rhead{\footnotesize \getMainTitle}
+
+
+%Fußzeile
+\lfoot{\footnotesize \getDoctype}
+\cfoot{}
+\rfoot{\footnotesize Page \thepage}
+
+%Festlegung der Linie oben und unten
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+\begin{document}
+	\pagestyle{empty}
+	%Titelblatt
+    \input{01_cover.tex}
+    
+    %Inhaltsverzeichnis
+    \input{02_tableofcontents.tex}
+   
+    
+    \pagestyle{fancy}
+    
+	%Projektdokumentation allgemein
+    \input{10_documentation.tex}
+    
+    %Virtualisierungsmoegichkeiten
+    \input{11_virtualization.tex}
+    
+    %Namenskonzepte
+    \input{12_designation_conventions.tex}
+    
+    %Netzwerk
+    \input{13_network_concept.tex}
+    \input{13_network.tex}
+    \input{14_DHCP.tex}
+    \input{15_DNS.tex}
+    
+    %Windows Server
+    \input{16_Windows_Server.tex}
+    \input{17_Active_Directory.tex}
+    \input{18_Backup.tex}
+    
+    %Deployment
+    \input{19_deployment.tex}
+    
+    %Begriffserklärung
+    %\newpage
+    %\input{21_glossary.tex}
+    
+    %Abbildungsverzeichnis
+    \newpage
+    \listoffigures
+    
+    %Tabellenverzeichnis
+    \newpage
+    \listoftables
+    
+    %Quellenverzeichnis
+    \newpage
+    \input{22_literature.tex}
+\end{document}

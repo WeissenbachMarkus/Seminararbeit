@@ -1,0 +1,50 @@
+\section{Designation Concepts}
+\begin{lstlisting}[caption=Naming Convention,frame=single]  
+Server<prefix><id>SRV001
+Client<prefix><id>THC0001
+Switch<prefix><id>SWT001
+Drucker<prefix><id>PRT001
+Router<prefix><id>RUT001
+AccessPoint<prefix><id>ACP001
+VoIP<prefix><id>VIP0001
+Firewall<prefix><id>VFW001
+\end{lstlisting}
+\newpage
+
+\subsection{Server roles}
+\begin{table}[h]		
+	\begin{tabular}{l|l}
+		\textbf{Server} & \textbf{Role}                                        \\ \hline
+		SRV110          & DC, ADDS, DNS ,DHCP, WDS (PXE)                       \\ 
+		SRV111          & MDT, ADK, MDT Workbench 2013, SQL Express, WSUS/WIDS
+	\end{tabular}
+	\caption{Server roles}
+	\label{Tbl_Server_roles}
+\end{table}
+
+\subsection{Passwords and Logins}
+\begin{table}[h]
+	\begin{tabular}{l|l|l|l}
+		\textbf{Machine}             & \textbf{Password}   & \textbf{Login}         & \textbf{Email}            \\ \hline
+		Proxmox             & 12345      & root          & mail@example.org \\
+		Windows Server 2012 & Password2! & Administrator & -                \\
+		NAS Server			& 12345		 & admin		& -                 \\
+		pfSense             & admin      & admin        & -                 \\
+		Test client         & TestUser   & 1234         & -                 \\
+	\end{tabular}
+	\caption{Passwords and Logins}
+	\label{Tbl_Passwords_Logins}
+\end{table}
+
+\subsection{Network Setup}
+\begin{table}[h]	
+	\begin{tabular}{l|l|l|l|l|l}
+		\textbf{Name}         & \textbf{WAN} & \textbf{IP} & \textbf{Domain} & \textbf{Protocol} & \textbf{Ports Slaves}  \\ \hline
+		Proxmox Network Setup & eth3         & 172.0.0.1   & test.lab        & LACP  			& eth1, eth2           
+	\end{tabular}
+	\caption{Network Setup}
+	\label{Tbl_Network Setup}
+\end{table}
+\newpage
+
+

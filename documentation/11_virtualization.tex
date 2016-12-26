@@ -1,0 +1,58 @@
+\newpage
+
+\section{Virtualization}
+
+\subsection{Definition}
+
+Wikipeadia defines virtualization as follows:
+\\In computing, virtualization refers to the act of creating a virtual (rather than actual) version of something, including virtual computer hardware platforms, operating systems, storage devices, and computer network resources. \\
+Source: https://en.wikipedia.org/wiki/Virtualization
+
+\subsection{Types of virtualization}
+
+\subsubsection{Server virtualization}
+
+The virtualization of servers is using the virtualization of computers which is also called hardware- or para-virtualization. By using this method a special operation system called "hypervisor" needs to be installed on physical hardware. The hypervisor is responsible for managing the physically available resources of the host computer, like CPU, RAM, storage and ports. By doing this, the hardware used by virtual operating systems is depending on the host computer (hypervisor).
+
+\subsubsection{Desktop virtualization}
+
+The virtualization of desktop PCs is technically identical with the server-virtualization technique. The newest generation of desktop virtualization is able to stream a virtual PC onto the users devices (notebook, tables, thin clients). This is often used by owning a centralized large-scale physical server, which provides the operating systems for all clients connected to it.
+\newline
+\newline
+Template for the virtual network boot client is \underline{THC0001}.
+
+\subsubsection{Application virtualization}
+
+The virtualization of an application allows to easily deploy software packages to a users device (PC, Notebooks, Tablets etc.). This is done by creating and copying a excutable ".exe" file to a shared network folder. By storing the file on the network, the installation and configuration is only done once. Available software products for this purpose are VMware ThinApp and Spoon Virtual Application.
+
+\subsubsection{Type 1 virtualization}
+
+Type 1 hypervisors run directly on the system hardware. They are often referred to as a "native" or "bare metal" or "embedded" hypervisors in vendor literature.
+\\
+Source: http://searchservervirtualization.techtarget.com/feature/Whats-the-difference-between-Type-1-and-Type-2-hypervisors
+
+\subsubsection{Type 2 virtualization}
+
+Type 2 hypervisors run on a host operating system. When the virtualization movement first began to take off, Type 2 hypervisors were most popular. Administrators could buy the software and install it on a server they already had.
+\\
+Source: http://searchservervirtualization.techtarget.com/feature/Whats-the-difference-between-Type-1-and-Type-2-hypervisors
+
+Source: http://searchservervirtualization.techtarget.com/feature/Whats-the-difference-between-Type-1-and-Type-2-hypervisors
+
+\subsection{Products}
+
+\begin{table}[h]
+    \begin{tabular}{llll}
+    ~                           & Proxmox VE           & VMware vSphere       & Windows Hyper-V                  \\ \hline
+    Guest-OS-Support            & Windows, Linux (KVM) & Windows, Linux, UNIX & Modern Windows OS, limited Linux \\
+    Open Source                 & Yes                   & No                 & No                             \\
+    Linux Containers (LXC)      & Yes                   & No                 & No                             \\
+    High availability           & Yes                   & Yes                   & Yes                               \\
+    Live VM-Snapshots           & Yes                   & Yes                   & Yes                               \\
+    Bare-metal-Hypervisor       & Yes                   & Yes                   & Yes                               \\
+    Webinterface                & Yes                   & Yes                   & No                             \\
+    Max. RAM and CPU for a Host & 160 CPU / 2 TB RAM   & 160 CPU / 2 TB RAM   & 64 CPU / 1 TB RAM                \\
+    Pricing                     & Free               & Starting at 650,50EUR  & Free                             \\
+    Support                     & Starting at 19,90/Month           & Starting at 257,79/Month    & Starting at 1.323,00/2Years \\
+    \end{tabular}
+\end{table}
